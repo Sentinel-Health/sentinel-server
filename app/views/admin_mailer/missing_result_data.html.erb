@@ -1,0 +1,26 @@
+<%= render 'greeting' %>
+
+<p>There was an issue creating data from a result. The details are below:</p>
+
+<ul>
+  <% if @data_source.present? %>
+    <li><strong>Data Source:</strong> <%= @data_source %></li>
+  <% end %>
+  <% if @context[:data_type].present? %>
+    <li><strong>Data Type:</strong> <%= @context[:data_type] %></li>
+  <% end %>
+  <% if @context[:user_id].present? %>
+    <li><strong>User ID:</strong> <%= @context[:user_id] %></li>
+  <% end %>
+  <% if @context[:lab_test_order_id].present? %>
+    <li><strong>Lab Test Order ID:</strong> <%= @context[:lab_test_order_id] %></li>
+  <% end %>
+  <% if @context[:vital_order_id].present? %>
+    <li><strong>Vital Order ID:</strong> <%= @context[:vital_order_id] %></li>
+  <% end %>
+  <% if @context[:clinical_record_id].present? %>
+    <li><strong>Clinical Record ID:</strong> <%= @context[:clinical_record_id] %></li>
+  <% end %>
+</ul>
+
+<%= render 'sign_off' %>

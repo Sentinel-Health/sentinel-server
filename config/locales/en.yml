@@ -1,0 +1,28 @@
+---
+en:
+  auth:
+    errors:
+      forbidden: Forbidden.
+      invalid_token: Invalid token.
+      not_found: Not found.
+      refresh_token_invalid: Request is invalid.
+      unauthorized: Unauthorized.
+      user_not_found: Request is invalid.
+  lab_tests:
+    errors:
+      missing: A lab test is required to place an order.
+      unsupported_state: Unforunately, your state is not eligible for lab tests at this time. Please reach out to us if you'd like for us to add support for your state.
+      feature_flag_disabled: This feature is not currently available.
+      missing_hipaa_consent: HIPAA Authorization agreement is required to order lab tests.
+      missing_telehealth_consent: Telehealth Consent agreement is required to order lab tests.
+  users:
+    errors:
+      invalid_phone_number: Invalid phone number.
+      invalid_verification_code: Invalid verification code.
+  onboarding:
+    errors:
+      missing_hipaa_consent: HIPAA Authorization agreement is required.
+      missing_policy_and_terms: Privacy Policy and Terms agreements are required.
+  health_profile:
+    errors:
+      underage: You must be at least 18 years old to use this service.

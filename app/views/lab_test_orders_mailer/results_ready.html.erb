@@ -1,0 +1,9 @@
+<h1>Your results are ready!</h1>
+
+<br>
+
+<%= render 'mailer_shared/user_greeting', user: @user %>
+
+<p>
+  Your recent lab test results are now ready to view. You can view them in the <% if @has_attachment %>attached PDF or in the <% end %>app.
+</p>

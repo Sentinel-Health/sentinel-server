@@ -1,0 +1,15 @@
+<%= render 'greeting' %>
+
+<p>A critical error resulted in the application:</p>
+
+<ul>
+  <li><strong>Error:</strong> <%= @error %></li>
+  <% if @context[:file_location].present? %>
+    <li><strong>File Location:</strong> <%= @context[:file_location] %></li>
+  <% end %>
+  <% if @context[:function_name].present? %>
+    <li><strong>Function Name:</strong> <%= @context[:function_name] %></li>
+  <% end %>
+</ul>
+
+<%= render 'sign_off' %>

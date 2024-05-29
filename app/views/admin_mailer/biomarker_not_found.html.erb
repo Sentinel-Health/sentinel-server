@@ -1,0 +1,18 @@
+<%= render 'greeting' %>
+
+<p>A biomarker wasn't found with the following context:</p>
+
+<ul>
+  <li><strong>Name:</strong> <%= @name %></li>
+  <% if @context[:lab_test_id].present? %>
+    <li><strong>Lab Test ID:</strong> <%= @context[:lab_test_id] %></li>
+  <% end %>
+  <% if @context[:file_location].present? %>
+    <li><strong>File Location:</strong> <%= @context[:file_location] %></li>
+  <% end %>
+  <% if @context[:function_name].present? %>
+    <li><strong>Function Name:</strong> <%= @context[:function_name] %></li>
+  <% end %>
+</ul>
+
+<%= render 'sign_off' %>

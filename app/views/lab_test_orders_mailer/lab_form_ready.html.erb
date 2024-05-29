@@ -1,0 +1,26 @@
+<h1>Prepare for your lab test.</h1>
+
+<br>
+
+<%= render 'mailer_shared/user_greeting', user: @user %>
+
+<p>
+  Your lab test order has been processed and is ready to be taken. If you haven't already done so, you can book an appointment at <%= @lab_test.lab.name %> <a href="<%= @lab_test.lab.appointment_url %>" target="_blank">here</a>. 
+</p>
+
+<p>
+  If you are asked about payment information or any other financial information when trying to book an appointment, choose "I have already paid or someone else is responsible".
+</p>
+
+<p>
+  When you go to <%= @lab_test.lab.name %>, bring the attached PDF (electronically or printed out) and a Photo ID.
+</p>
+
+<% if @lab_test.is_fasting_required %>
+<p>IMPORTANT: <%= @lab_test.fasting_instructions %></p>
+<% else %>
+<p>You do not need to fast for this test.</p>
+<% end %>
+<% if @lab_test.has_additional_preparation_instructions %>
+<p>Additional Note: <%= @lab_test.additional_preparation_instructions %></p>
+<% end %>
